@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    font-family: 'Nunito', system-ui, sans-serif;
+  }
+  /* Ký tự Hán dùng font riêng cho rõ nét */
+  .font-hanzi {
+    font-family: 'Noto Sans SC', sans-serif;
+  }
+}
+
+@layer components {
+  /* Nút bấm chính - phong cách GenZ */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-genz px-6 py-3
+      font-bold text-white shadow-lg shadow-brand-500/30 transition-all duration-200
+      hover:scale-105 hover:shadow-xl active:scale-95;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-5 py-2.5
+      font-bold text-brand-600 shadow-sm ring-1 ring-brand-100 transition-all duration-200
+      hover:bg-brand-50 hover:scale-105 active:scale-95;
+  }
+  /* Thẻ bo góc mềm mại */
+  .card {
+    @apply rounded-3xl bg-white p-6 shadow-lg shadow-slate-200/60 ring-1 ring-slate-100;
+  }
+  .badge-chip {
+    @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-bold;
+  }
+}
+
+/* Thanh cuộn gọn gàng */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-brand-200;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-brand-300;
+}

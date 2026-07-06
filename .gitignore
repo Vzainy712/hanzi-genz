@@ -1,0 +1,23 @@
+# Dependencies
+node_modules
+dist
+dist-ssr
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+
+# Claude Code - cấu hình quyền cục bộ (riêng từng máy)
+.claude/settings.local.json
+
+# Env
+.env
+.env.local
