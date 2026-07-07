@@ -1,5 +1,8 @@
 # 字 HanZi GenZ — Học tiếng Trung HSK cho GenZ
 
+🌐 **Dùng ngay**: https://vzainy712.github.io/hanzi-genz/
+📱 **Cài lên iPhone**: mở link bằng Safari → nút Chia sẻ → "Thêm vào MH chính" → dùng như app thật.
+
 Nền tảng học chữ Hán (HSK 1-6) tương tác, thiết kế trẻ trung dành cho người học 18-35 tuổi.
 Giao diện **hoàn toàn bằng tiếng Việt**.
 
