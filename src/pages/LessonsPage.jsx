@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { hskData } from '../data/hskData.js'
+import { vocabLessonGroups, VOCAB_LEVEL_COLORS } from '../data/vocabLessons.js'
 import { useProgress } from '../context/ProgressContext.jsx'
 
 /** Trang danh sách bài học theo từng cấp độ HSK. */
@@ -11,6 +12,66 @@ export default function LessonsPage() {
       <div>
         <h1 className="text-2xl font-black text-slate-800">📚 Bài học</h1>
         <p className="text-slate-500">Chọn một bài để bắt đầu học chữ Hán.</p>
+      </div>
+
+      {/* Giáo trình từ vựng chuẩn HSK (đầy đủ, sinh từ kho 595 từ HSK 1-3) */}
+      <section className="rounded-3xl bg-gradient-to-br from-brand-50 to-pink-50 p-5 ring-1 ring-brand-100">
+        <h2 className="text-lg font-extrabold text-slate-800">🎓 Giáo trình từ vựng chuẩn HSK</h2>
+        <p className="text-sm text-slate-500">
+          Trọn bộ từ vựng thật theo giáo trình — HSK 1-3 đã có nghĩa tiếng Việt đầy đủ, kèm câu trending mỗi bài.
+        </p>
+        <div className="mt-4 flex flex-col gap-5">
+          {vocabLessonGroups.map((group) => {
+            const allWords = group.lessons.flatMap((l) => l.words)
+            const done = allWords.filter((w) => learnedIds.includes(w.hanzi)).length
+            return (
+              <div key={group.level}>
+                <div className="mb-2 flex items-center gap-2">
+                  <span
+                    className={`rounded-full bg-gradient-to-r ${VOCAB_LEVEL_COLORS[group.level]} px-3 py-1 text-sm font-black text-white`}
+                  >
+                    HSK {group.level}
+                  </span>
+                  <span className="text-xs font-bold text-slate-400">
+                    {group.lessons.length} bài · {done}/{allWords.length} từ đã học
+                  </span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {group.lessons.map((lesson) => {
+                    const lessonDone = lesson.words.filter((w) => learnedIds.includes(w.hanzi)).length
+                    const complete = lessonDone === lesson.words.length
+                    const best = quizBest[lesson.id]
+                    return (
+                      <Link
+                        key={lesson.id}
+                        to={`/vocab/${lesson.id}`}
+                        className={`flex items-center gap-1.5 rounded-xl px-3 py-2 text-sm font-bold transition hover:scale-105 ${
+                          complete
+                            ? 'bg-emerald-100 text-emerald-700'
+                            : lessonDone > 0
+                              ? 'bg-white text-brand-600 ring-1 ring-brand-200'
+                              : 'bg-white text-slate-600 ring-1 ring-slate-100'
+                        }`}
+                        title={`${lessonDone}/${lesson.words.length} từ${best != null ? ` · Quiz ${best}%` : ''}`}
+                      >
+                        <span>{lesson.emoji}</span>
+                        <span>Bộ {lesson.index}</span>
+                        {complete && <span>✅</span>}
+                      </Link>
+                    )
+                  })}
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </section>
+
+      <div>
+        <h2 className="text-lg font-extrabold text-slate-800">💎 Bài học chọn lọc</h2>
+        <p className="text-sm text-slate-500">
+          Các bài theo chủ đề, biên soạn kỹ với mẹo nhớ GenZ và ví dụ chi tiết.
+        </p>
       </div>
 
       {hskData.map((level) => (

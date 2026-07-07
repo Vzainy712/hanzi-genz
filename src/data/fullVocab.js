@@ -7,8 +7,13 @@
  */
 
 import rawVocab from './hskFullVocab.json'
-import { viOverlay } from './viOverlay.js'
+import { viOverlay as viOverlayL1 } from './viOverlay.js'
+import { viOverlayL2 } from './viOverlayL2.js'
+import { viOverlayL3 } from './viOverlayL3.js'
 import { getAllCharacters } from './hskData.js'
+
+// Gộp các lớp phủ tiếng Việt theo cấp (L1 -> L3).
+const viOverlay = { ...viOverlayL1, ...viOverlayL2, ...viOverlayL3 }
 
 // Bản đồ nghĩa tiếng Việt lấy từ dữ liệu curated (chữ Hán -> nghĩa).
 const curatedVi = {}
@@ -35,6 +40,13 @@ export const fullVocab = rawVocab.map((x) => {
 
 /** Tổng số từ. */
 export const totalVocabCount = fullVocab.length
+
+/** Tổng số "đơn vị học được" (chữ curated + từ vựng HSK 1-3) - dùng cho tiến độ. */
+export const learnableCount = (() => {
+  const set = new Set(getAllCharacters().map((c) => c.hanzi))
+  for (const w of fullVocab) if (w.level <= 3) set.add(w.hanzi)
+  return set.size
+})()
 
 /** Số từ đã có nghĩa tiếng Việt. */
 export const translatedCount = fullVocab.filter((w) => w.vietnamese).length

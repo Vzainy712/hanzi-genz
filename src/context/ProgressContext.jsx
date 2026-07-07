@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
-import { getTotalCharacterCount } from '../data/hskData.js'
+import { learnableCount } from '../data/fullVocab.js'
 import { useToast, randomEncouragement } from './ToastContext.jsx'
 
 /**
@@ -145,7 +145,7 @@ export function ProgressProvider({ children }) {
   const value = useMemo(
     () => ({
       ...state,
-      totalCharacters: getTotalCharacterCount(),
+      totalCharacters: learnableCount,
       earnedBadges,
       isLearned: (hanzi) => state.learnedIds.includes(hanzi),
       markLearned,

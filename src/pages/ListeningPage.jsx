@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { grammarData } from '../data/grammarData.js'
+import { trendySentences } from '../data/trendySentences.js'
 import { speakChinese, isSpeechSupported } from '../utils/speech.js'
 import { useToast, randomEncouragement } from '../context/ToastContext.jsx'
 
@@ -13,9 +14,11 @@ function shuffle(arr) {
   return a
 }
 
-/** Gom tất cả câu ví dụ từ dữ liệu ngữ pháp làm ngân hàng câu nghe. */
+/** Ngân hàng câu nghe: câu ví dụ ngữ pháp + câu trending/lyrics. */
 function getSentencePool() {
-  return grammarData.flatMap((g) => g.examples)
+  const grammar = grammarData.flatMap((g) => g.examples)
+  const trendy = trendySentences.map((s) => ({ hanzi: s.hanzi, pinyin: s.pinyin, meaning: s.vi }))
+  return [...grammar, ...trendy]
 }
 
 /** Tạo bộ câu hỏi nghe: nghe câu → chọn nghĩa đúng trong 4 phương án. */

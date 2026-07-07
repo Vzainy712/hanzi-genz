@@ -38,6 +38,20 @@ const modes = [
     gradient: 'from-orange-500 to-amber-500',
   },
   {
+    to: '/trending',
+    emoji: '🎤',
+    title: 'Câu trending & Lyrics',
+    desc: 'Meme, câu cửa miệng, lời bài hát hot',
+    gradient: 'from-fuchsia-500 to-purple-600',
+  },
+  {
+    to: '/sentence-game',
+    emoji: '🧱',
+    title: 'Xếp câu',
+    desc: 'Ghép mảnh từ thành câu đúng thứ tự',
+    gradient: 'from-lime-500 to-emerald-500',
+  },
+  {
     to: '/dictionary',
     emoji: '📖',
     title: 'Từ điển HSK',

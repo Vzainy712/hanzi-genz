@@ -16,7 +16,10 @@ Giao diện **hoàn toàn bằng tiếng Việt**.
 - 🧠 **Mẹo nhớ GenZ**: mỗi chữ có mẹo ghi nhớ dí dỏm, liên kết hình dạng/bộ thủ/âm với nghĩa.
 - 🃏 **Flashcard nhớ mặt chữ**: lật thẻ, tự đánh giá "đã nhớ / chưa nhớ" (chữ chưa nhớ được ôn lại).
 - 🎧 **Luyện nghe câu**: nghe câu tiếng Trung → chọn nghĩa đúng.
-- 📖 **Từ điển HSK đầy đủ**: tra cứu **~4.991 từ HSK 1-6** (nhập từ dữ liệu mở), tìm theo chữ Hán/pinyin/nghĩa, lọc theo cấp. Hiển thị **song song Việt–Anh** (HSK 1 đã phủ 100% tiếng Việt, các cấp sau bổ sung dần).
+- 🎓 **Giáo trình từ vựng chuẩn HSK**: 60 bài học sinh tự động từ kho từ thật (HSK 1: 15 bài, HSK 2: 15 bài, HSK 3: 30 bài) — mỗi bài ~10 từ với thẻ từ song ngữ Việt–Anh, nét chữ, phát âm, quiz riêng và câu trending kèm theo.
+- 🎤 **Câu trending & Lyrics**: 20 câu meme mạng Trung (躺平, YYDS, 我太难了…), câu cửa miệng và lời bài hát nổi tiếng (月亮代表我的心, 甜蜜蜜, 听妈妈的话…) kèm nguồn gốc.
+- 🧱 **Trò chơi Xếp câu**: ghép mảnh từ thành câu đúng thứ tự, chấm điểm + đọc to khi đúng.
+- 📖 **Từ điển HSK đầy đủ**: tra cứu **~4.991 từ HSK 1-6** (nhập từ dữ liệu mở), tìm theo chữ Hán/pinyin/nghĩa, lọc theo cấp. Hiển thị **song song Việt–Anh** — **HSK 1-3 đã phủ 100% tiếng Việt (595 từ)**, HSK 4-6 bổ sung dần.
 - 🧩 **Module Bộ thủ (部首)**: học các bộ chữ gốc kèm ví dụ chữ chứa bộ đó.
 - 🔤 **Ngữ pháp & Câu**: 9 mẫu câu HSK (是, 吗, 的, 不/没, 很, 有, lượng từ 个, 在…) kèm câu ví dụ có audio.
 - 🗣️ **Module Phát âm**: giải thích 4 thanh điệu, bảng thanh mẫu/vận mẫu khó, và **trò chơi đoán thanh điệu**.
@@ -27,9 +30,10 @@ Giao diện **hoàn toàn bằng tiếng Việt**.
 - 📱 **Mobile-first**: điều hướng gọn 4 mục (Trang chủ · Bài học · Luyện tập · Tiến độ).
 
 Nội dung hiện tại:
-- **Bài học curated** (có nét, mẹo nhớ GenZ, ví dụ): ~70 chữ HSK 1-3, 13 bài
-- **Từ điển tra cứu**: ~4.991 từ HSK 1-6 (HSK 1 đã dịch đủ tiếng Việt)
-- **9 điểm ngữ pháp** + **15 bộ thủ** + module phát âm
+- **Giáo trình từ vựng chuẩn**: 595 từ HSK 1-3 (60 bài, 100% nghĩa tiếng Việt + tiếng Anh đối chiếu)
+- **Bài học chọn lọc** (có mẹo nhớ GenZ, ví dụ chi tiết): ~70 chữ HSK 1-3, 13 bài
+- **Từ điển tra cứu**: ~4.991 từ HSK 1-6
+- **20 câu trending/lyrics** + **9 điểm ngữ pháp** + **15 bộ thủ** + module phát âm
 
 > Dữ liệu từ vựng đầy đủ lấy từ nguồn mở [complete-hsk-vocabulary](https://github.com/drkameleon/complete-hsk-vocabulary)
 > (chữ Hán + pinyin + nghĩa Anh + bộ thủ). Nghĩa tiếng Việt do dự án tự biên soạn, bổ sung dần

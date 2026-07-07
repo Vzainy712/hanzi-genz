@@ -13,6 +13,10 @@ import FlashcardPage from './pages/FlashcardPage.jsx'
 import ListeningPage from './pages/ListeningPage.jsx'
 import RadicalsPage from './pages/RadicalsPage.jsx'
 import DictionaryPage from './pages/DictionaryPage.jsx'
+import VocabLessonDetailPage from './pages/VocabLessonDetailPage.jsx'
+import VocabQuizPage from './pages/VocabQuizPage.jsx'
+import TrendyPage from './pages/TrendyPage.jsx'
+import SentenceGamePage from './pages/SentenceGamePage.jsx'
 
 /** Bố cục gốc + định tuyến toàn ứng dụng. */
 export default function App() {
@@ -30,6 +34,10 @@ export default function App() {
           <Route path="/listening" element={<ListeningPage />} />
           <Route path="/radicals" element={<RadicalsPage />} />
           <Route path="/dictionary" element={<DictionaryPage />} />
+          <Route path="/vocab/:lessonId" element={<VocabLessonDetailPage />} />
+          <Route path="/vocab-quiz/:lessonId" element={<VocabQuizPage />} />
+          <Route path="/trending" element={<TrendyPage />} />
+          <Route path="/sentence-game" element={<SentenceGamePage />} />
           <Route path="/grammar" element={<GrammarPage />} />
           <Route path="/grammar/:grammarId" element={<GrammarDetailPage />} />
           <Route path="/pronunciation" element={<PronunciationPage />} />
