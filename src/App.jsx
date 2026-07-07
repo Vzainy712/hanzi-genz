@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
+import ReminderManager from './components/ReminderManager.jsx'
 import HomePage from './pages/HomePage.jsx'
 import LessonsPage from './pages/LessonsPage.jsx'
 import LessonDetailPage from './pages/LessonDetailPage.jsx'
@@ -22,6 +23,7 @@ import SentenceGamePage from './pages/SentenceGamePage.jsx'
 export default function App() {
   return (
     <div className="min-h-screen">
+      <ReminderManager />
       <Navbar />
       <main className="mx-auto max-w-3xl px-4 pb-24 pt-6 sm:pb-10">
         <Routes>

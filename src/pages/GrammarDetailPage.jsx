@@ -1,11 +1,13 @@
 import { Link, useParams } from 'react-router-dom'
 import { getGrammarById } from '../data/grammarData.js'
+import { getMediaByGrammar } from '../data/mediaData.js'
 import { speakChinese, isSpeechSupported } from '../utils/speech.js'
 
 /** Trang chi tiết một điểm ngữ pháp: công thức, giải thích, mẹo và câu ví dụ. */
 export default function GrammarDetailPage() {
   const { grammarId } = useParams()
   const g = getGrammarById(grammarId)
+  const mediaClips = g ? getMediaByGrammar(g.id) : []
 
   if (!g) {
     return (
@@ -75,6 +77,39 @@ export default function GrammarDetailPage() {
           ))}
         </div>
       </div>
+
+      {/* Mẫu câu này trong phim & nhạc - học qua ngữ cảnh giải trí */}
+      {mediaClips.length > 0 && (
+        <div className="rounded-3xl bg-gradient-to-br from-slate-800 to-slate-900 p-5 text-white">
+          <h2 className="font-extrabold">🍿 Mẫu câu này trong phim & nhạc</h2>
+          <p className="text-xs text-white/60">Gặp ngữ pháp giữa đời thật - nhớ dai hơn gấp bội!</p>
+          <div className="mt-3 flex flex-col gap-3">
+            {mediaClips.map((clip) => (
+              <div key={clip.id} className="rounded-2xl bg-white/10 p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <div className="font-hanzi text-xl font-bold">{clip.hanzi}</div>
+                    <div className="text-sm font-semibold text-accent-cyan">{clip.pinyin}</div>
+                    <div className="text-sm text-white/90">{clip.vi}</div>
+                    <div className="mt-1 text-xs text-white/60">
+                      {clip.type === 'movie' ? '🎬' : clip.type === 'mv' ? '🎵' : '📱'} {clip.source} · {clip.note}
+                    </div>
+                  </div>
+                  {isSpeechSupported() && (
+                    <button
+                      onClick={() => speakChinese(clip.hanzi)}
+                      className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-white/20 transition hover:scale-110 active:scale-95"
+                      aria-label={`Nghe ${clip.hanzi}`}
+                    >
+                      🔊
+                    </button>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

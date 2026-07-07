@@ -1,5 +1,14 @@
+import { useState } from 'react'
 import { useProgress, BADGES } from '../context/ProgressContext.jsx'
+import { useToast } from '../context/ToastContext.jsx'
 import { hskData } from '../data/hskData.js'
+import {
+  getReminderSettings,
+  saveReminderSettings,
+  isNotificationSupported,
+  requestNotificationPermission,
+  fireReminderNotification,
+} from '../utils/reminder.js'
 
 /** Trang theo dõi tiến độ: chỉ số, huy hiệu, tiến độ từng cấp độ. */
 export default function ProgressPage() {
@@ -76,6 +85,9 @@ export default function ProgressPage() {
         </div>
       </section>
 
+      {/* Nhắc lịch học hằng ngày */}
+      <ReminderSettings />
+
       {/* Đặt lại tiến độ */}
       <section className="card">
         <h2 className="font-extrabold text-slate-800">⚙️ Cài đặt</h2>
@@ -92,6 +104,93 @@ export default function ProgressPage() {
         </button>
       </section>
     </div>
+  )
+}
+
+/** Khối cài đặt nhắc lịch học hằng ngày. */
+function ReminderSettings() {
+  const { showToast } = useToast()
+  const [settings, setSettings] = useState(getReminderSettings)
+
+  async function toggle() {
+    const next = { ...settings, enabled: !settings.enabled }
+    if (next.enabled && isNotificationSupported()) {
+      const perm = await requestNotificationPermission()
+      if (perm === 'denied') {
+        showToast('Bạn đã chặn thông báo - app sẽ nhắc bằng banner khi đang mở nhé!', {
+          emoji: 'ℹ️',
+          type: 'info',
+          duration: 4000,
+        })
+      }
+    }
+    setSettings(next)
+    saveReminderSettings(next)
+    showToast(next.enabled ? `Sẽ nhắc bạn học lúc ${next.time} mỗi ngày!` : 'Đã tắt nhắc học', {
+      emoji: '⏰',
+    })
+  }
+
+  function changeTime(e) {
+    const next = { ...settings, time: e.target.value, lastFired: null }
+    setSettings(next)
+    saveReminderSettings(next)
+  }
+
+  function testNow() {
+    const fired = fireReminderNotification()
+    showToast(
+      fired ? 'Đã gửi thông báo thử - kiểm tra góc màn hình!' : 'Tới giờ học rồi! (bản xem thử trong app)',
+      { emoji: '⏰', type: 'badge' },
+    )
+  }
+
+  return (
+    <section className="card">
+      <div className="flex items-center justify-between gap-3">
+        <div>
+          <h2 className="font-extrabold text-slate-800">⏰ Nhắc học mỗi ngày</h2>
+          <p className="mt-1 text-sm text-slate-500">
+            Đặt giờ để app nhắc bạn vào học, giữ chuỗi 🔥 không bị đứt.
+          </p>
+        </div>
+        {/* Công tắc bật/tắt */}
+        <button
+          onClick={toggle}
+          role="switch"
+          aria-checked={settings.enabled}
+          className={`relative h-8 w-14 shrink-0 rounded-full transition ${
+            settings.enabled ? 'bg-gradient-genz' : 'bg-slate-200'
+          }`}
+        >
+          <span
+            className={`absolute top-1 h-6 w-6 rounded-full bg-white shadow transition-all ${
+              settings.enabled ? 'left-7' : 'left-1'
+            }`}
+          />
+        </button>
+      </div>
+
+      {settings.enabled && (
+        <div className="mt-4 flex flex-wrap items-center gap-3 animate-pop-in">
+          <label className="flex items-center gap-2 font-bold text-slate-600">
+            Giờ nhắc:
+            <input
+              type="time"
+              value={settings.time}
+              onChange={changeTime}
+              className="rounded-xl border-0 bg-slate-50 px-3 py-2 font-bold text-brand-600 ring-1 ring-slate-200 outline-none focus:ring-2 focus:ring-brand-300"
+            />
+          </label>
+          <button onClick={testNow} className="btn-ghost text-sm">🔔 Thử thông báo</button>
+        </div>
+      )}
+
+      <p className="mt-3 text-xs text-slate-400">
+        💡 Nhắc hoạt động khi app đang mở (tab nền trên máy tính vẫn nhắc được). Trên iPhone hãy mở
+        app mỗi ngày - chuỗi 🔥 và thông báo trong app sẽ chờ sẵn bạn.
+      </p>
+    </section>
   )
 }
 

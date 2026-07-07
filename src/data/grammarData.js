@@ -155,6 +155,51 @@ export const grammarData = [
       { hanzi: '你在哪儿？', pinyin: 'Nǐ zài nǎr?', meaning: 'Bạn đang ở đâu?' },
     ],
   },
+  {
+    id: 'gr-tai-le',
+    title: 'Cảm thán với 太…了',
+    emoji: '🤯',
+    level: 1,
+    pattern: '太 + tính từ + 了',
+    explanation:
+      'Kẹp tính từ vào giữa 太 (tài) và 了 (le) để cảm thán "quá…!". Đây là cấu trúc khen/chê cảm xúc mạnh phổ biến nhất khi nói chuyện.',
+    tip: 'Meme mạng 我太难了 (tôi khó khăn quá) chính là cấu trúc này - thấy 太…了 là biết đang "quá trời quá đất".',
+    examples: [
+      { hanzi: '太好了！', pinyin: 'Tài hǎo le!', meaning: 'Tuyệt quá!' },
+      { hanzi: '太贵了！', pinyin: 'Tài guì le!', meaning: 'Đắt quá!' },
+      { hanzi: '我太难了。', pinyin: 'Wǒ tài nán le.', meaning: 'Tôi khổ quá mà (meme quốc dân).' },
+    ],
+  },
+  {
+    id: 'gr-yue',
+    title: 'Càng… càng… với 越…越…',
+    emoji: '📈',
+    level: 3,
+    pattern: '越 + A + 越 + B · 越来越 + tính từ',
+    explanation:
+      '越…越… diễn tả hai thứ tăng cùng nhau: "càng A thì càng B". Riêng 越来越 + tính từ = "càng ngày càng…" (thay đổi theo thời gian).',
+    tip: 'Thoại viral phim Cuồng Phong: 风浪越大，鱼越贵 (sóng càng lớn, cá càng đắt) - nhớ meme là nhớ ngữ pháp!',
+    examples: [
+      { hanzi: '越多越好。', pinyin: 'Yuè duō yuè hǎo.', meaning: 'Càng nhiều càng tốt.' },
+      { hanzi: '汉语越学越有意思。', pinyin: 'Hànyǔ yuè xué yuè yǒu yìsi.', meaning: 'Tiếng Trung càng học càng thú vị.' },
+      { hanzi: '天气越来越热。', pinyin: 'Tiānqì yuè lái yuè rè.', meaning: 'Trời càng ngày càng nóng.' },
+    ],
+  },
+  {
+    id: 'gr-rang',
+    title: 'Câu khiến với 让',
+    emoji: '🎬',
+    level: 3,
+    pattern: 'A + 让 + B + làm gì',
+    explanation:
+      '让 (ràng) = "để cho, khiến cho": A khiến/cho phép B làm gì đó. Dùng cả khi nói cảm xúc: 让我很开心 (khiến tôi rất vui).',
+    tip: 'Tên phim kinh điển 让子弹飞 (Để viên đạn bay) chính là mẫu câu này - 让 + 子弹 (viên đạn) + 飞 (bay).',
+    examples: [
+      { hanzi: '让我看看。', pinyin: 'Ràng wǒ kànkan.', meaning: 'Để tôi xem nào.' },
+      { hanzi: '妈妈不让我玩游戏。', pinyin: 'Māma bú ràng wǒ wán yóuxì.', meaning: 'Mẹ không cho tôi chơi game.' },
+      { hanzi: '这首歌让我想家。', pinyin: 'Zhè shǒu gē ràng wǒ xiǎng jiā.', meaning: 'Bài hát này làm tôi nhớ nhà.' },
+    ],
+  },
 ]
 
 /** Tìm một điểm ngữ pháp theo id. */

@@ -20,7 +20,8 @@ Giao diện **hoàn toàn bằng tiếng Việt**.
 - 🃏 **Flashcard nhớ mặt chữ**: lật thẻ, tự đánh giá "đã nhớ / chưa nhớ" (chữ chưa nhớ được ôn lại).
 - 🎧 **Luyện nghe câu**: nghe câu tiếng Trung → chọn nghĩa đúng.
 - 🎓 **Giáo trình từ vựng chuẩn HSK**: 60 bài học sinh tự động từ kho từ thật (HSK 1: 15 bài, HSK 2: 15 bài, HSK 3: 30 bài) — mỗi bài ~10 từ với thẻ từ song ngữ Việt–Anh, nét chữ, phát âm, quiz riêng và câu trending kèm theo.
-- 🎤 **Câu trending & Lyrics**: 20 câu meme mạng Trung (躺平, YYDS, 我太难了…), câu cửa miệng và lời bài hát nổi tiếng (月亮代表我的心, 甜蜜蜜, 听妈妈的话…) kèm nguồn gốc.
+- 🎤 **Góc giải trí tiếng Trung**: 39 nội dung — meme mạng (躺平, YYDS…), **trend Douyin** (栓Q, 尊嘟假嘟, 科目三…), **thoại phim/drama** (Tây Du Ký, Chân Hoàn Truyện, Cuồng Phong…) và lời nhạc hot (孤勇者, 小幸运…) kèm nguồn gốc + link ngữ pháp liên quan.
+- ⏰ **Nhắc học mỗi ngày**: đặt giờ nhắc trong trang Tiến độ, thông báo hệ thống + banner trong app.
 - 🧱 **Trò chơi Xếp câu**: ghép mảnh từ thành câu đúng thứ tự, chấm điểm + đọc to khi đúng.
 - 📖 **Từ điển HSK đầy đủ**: tra cứu **~4.991 từ HSK 1-6** (nhập từ dữ liệu mở), tìm theo chữ Hán/pinyin/nghĩa, lọc theo cấp. Hiển thị **song song Việt–Anh** — **HSK 1-3 đã phủ 100% tiếng Việt (595 từ)**, HSK 4-6 bổ sung dần.
 - 🧩 **Module Bộ thủ (部首)**: học các bộ chữ gốc kèm ví dụ chữ chứa bộ đó.
@@ -36,7 +37,7 @@ Nội dung hiện tại:
 - **Giáo trình từ vựng chuẩn**: 595 từ HSK 1-3 (60 bài, 100% nghĩa tiếng Việt + tiếng Anh đối chiếu)
 - **Bài học chọn lọc** (có mẹo nhớ GenZ, ví dụ chi tiết): ~70 chữ HSK 1-3, 13 bài
 - **Từ điển tra cứu**: ~4.991 từ HSK 1-6
-- **20 câu trending/lyrics** + **9 điểm ngữ pháp** + **15 bộ thủ** + module phát âm
+- **39 nội dung giải trí** (trend Douyin, thoại phim, MV) + **12 điểm ngữ pháp** (có mẫu câu trong phim/nhạc) + **15 bộ thủ** + module phát âm + nhắc học hằng ngày
 
 > Dữ liệu từ vựng đầy đủ lấy từ nguồn mở [complete-hsk-vocabulary](https://github.com/drkameleon/complete-hsk-vocabulary)
 > (chữ Hán + pinyin + nghĩa Anh + bộ thủ). Nghĩa tiếng Việt do dự án tự biên soạn, bổ sung dần
