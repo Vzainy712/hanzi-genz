@@ -102,6 +102,16 @@ export default function VocabLessonDetailPage() {
         )}
       </div>
 
+      {/* Học hết chủ đề -> mở khoá Boss */}
+      {doneCount === words.length && (
+        <Link
+          to={`/boss/${lesson.id}`}
+          className="flex items-center justify-center gap-3 rounded-3xl bg-gradient-to-r from-slate-800 to-slate-900 px-6 py-4 font-black text-white shadow-xl transition hover:scale-[1.02] active:scale-95 animate-pop-in"
+        >
+          ⚔️ Thách đấu Boss chương này!
+        </Link>
+      )}
+
       {/* Câu trending liên quan - học từ trong ngữ cảnh thật */}
       {lesson.sentences.length > 0 && (
         <section className="rounded-3xl bg-gradient-to-br from-slate-50 to-brand-50 p-5 ring-1 ring-brand-100">

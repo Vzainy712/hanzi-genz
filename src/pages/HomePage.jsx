@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
-import { useProgress } from '../context/ProgressContext.jsx'
+import { useProgress, DAILY_QUESTS } from '../context/ProgressContext.jsx'
 import { hskData } from '../data/hskData.js'
 import { vocabLessonGroups, VOCAB_LEVEL_COLORS } from '../data/vocabLessons.js'
 
 /** Trang chủ - dashboard tổng quan, lời chào và lối tắt vào bài học. */
 export default function HomePage() {
-  const { points, streak, learnedIds, totalCharacters, earnedBadges } = useProgress()
+  const { points, streak, learnedIds, totalCharacters, earnedBadges, dueWords, questsToday, claimQuest } =
+    useProgress()
   const progressPercent = Math.round((learnedIds.length / totalCharacters) * 100)
 
   return (
@@ -37,6 +38,69 @@ export default function HomePage() {
         <StatCard emoji="🔥" value={streak} label="Ngày liên tiếp" color="text-amber-500" />
         <StatCard emoji="💎" value={points} label="Tổng điểm" color="text-brand-600" />
         <StatCard emoji="🏅" value={earnedBadges.length} label="Huy hiệu" color="text-accent-pink" />
+      </section>
+
+      {/* SRS: từ đến hạn ôn hôm nay */}
+      {dueWords.length > 0 && (
+        <Link
+          to="/review"
+          className="flex items-center gap-4 rounded-3xl bg-gradient-cool p-5 text-white shadow-lg transition hover:scale-[1.02] animate-pop-in"
+        >
+          <div className="text-4xl animate-float">🧠</div>
+          <div className="min-w-0 flex-1">
+            <div className="font-black">Hôm nay cần ôn {dueWords.length} từ</div>
+            <p className="text-sm text-white/85">Ôn đúng lúc sắp quên = nhớ trọn đời. Quẹt nhanh 2 phút thôi!</p>
+          </div>
+          <span className="rounded-2xl bg-white/20 px-4 py-2 font-black">Ôn ngay →</span>
+        </Link>
+      )}
+
+      {/* Nhiệm vụ hằng ngày */}
+      <section className="card">
+        <div className="flex items-center justify-between">
+          <h2 className="font-extrabold text-slate-800">🎯 Nhiệm vụ hôm nay</h2>
+          <span className="badge-chip bg-brand-100 text-brand-700">
+            {questsToday.claimed.length}/{DAILY_QUESTS.length} xong
+          </span>
+        </div>
+        <div className="mt-3 flex flex-col gap-3">
+          {DAILY_QUESTS.map((quest) => {
+            const progress = Math.min(questsToday[quest.field], quest.target)
+            const complete = progress >= quest.target
+            const claimed = questsToday.claimed.includes(quest.id)
+            return (
+              <div key={quest.id} className="flex items-center gap-3">
+                <span className="text-2xl">{quest.emoji}</span>
+                <div className="min-w-0 flex-1">
+                  <div className="flex justify-between text-sm font-bold">
+                    <span className="text-slate-700">{quest.label}</span>
+                    <span className={complete ? 'text-emerald-600' : 'text-slate-400'}>
+                      {progress}/{quest.target}
+                    </span>
+                  </div>
+                  <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-slate-100">
+                    <div
+                      className={`h-full rounded-full transition-all duration-500 ${complete ? 'bg-emerald-400' : 'bg-gradient-genz'}`}
+                      style={{ width: `${(progress / quest.target) * 100}%` }}
+                    />
+                  </div>
+                </div>
+                {claimed ? (
+                  <span className="badge-chip bg-emerald-100 text-emerald-700">✅ Đã nhận</span>
+                ) : complete ? (
+                  <button
+                    onClick={() => claimQuest(quest.id)}
+                    className="rounded-xl bg-gradient-genz px-3 py-1.5 text-xs font-black text-white shadow transition hover:scale-105 active:scale-95 animate-wiggle"
+                  >
+                    Nhận +{quest.reward}💎
+                  </button>
+                ) : (
+                  <span className="text-xs font-bold text-slate-300">+{quest.reward}💎</span>
+                )}
+              </div>
+            )
+          })}
+        </div>
       </section>
 
       {/* Thanh tiến độ tổng */}

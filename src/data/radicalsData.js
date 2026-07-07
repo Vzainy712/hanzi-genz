@@ -152,3 +152,45 @@ export const radicalsData = [
     ],
   },
 ]
+
+/**
+ * Liên tưởng HÌNH ẢNH cho bộ thủ - nhìn bộ là "thấy" nghĩa ngay.
+ * Ví dụ: thấy 口 hãy tưởng tượng một cái miệng đang mở to.
+ */
+export const radicalVisuals = {
+  亻: { emoji: '🧍', story: 'Nét đứng như một NGƯỜI đang đứng nghiêng người' },
+  人: { emoji: '🚶', story: 'Hai nét như hai chân NGƯỜI đang bước đi' },
+  女: { emoji: '👩', story: 'Dáng người CON GÁI đang ngồi duyên dáng' },
+  口: { emoji: '👄', story: 'Ô vuông là cái MIỆNG mở to - chữ nào có 口 thường dính tới ăn, nói, kêu' },
+  氵: { emoji: '💧', story: 'Ba giọt NƯỚC đang chảy xuống' },
+  水: { emoji: '🌊', story: 'Dòng NƯỚC chảy có nhánh toé sang hai bên' },
+  木: { emoji: '🌳', story: 'Thân CÂY có cành ngang và rễ xoè dưới đất' },
+  日: { emoji: '☀️', story: 'MẶT TRỜI tròn được "vuông hoá" - liên quan tới ngày, ánh sáng' },
+  月: { emoji: '🌙', story: 'Vầng TRĂNG khuyết treo nghiêng' },
+  忄: { emoji: '❤️', story: 'TRÁI TIM dựng đứng - chữ nào có nó là chuyện cảm xúc' },
+  心: { emoji: '💗', story: 'TRÁI TIM với các ngăn - cảm xúc từ tận đáy lòng' },
+  讠: { emoji: '🗣️', story: 'Người đang NÓI - âm thanh phát ra từng lớp' },
+  宀: { emoji: '🏠', story: 'MÁI NHÀ che chở mọi thứ bên dưới' },
+  艹: { emoji: '🌿', story: 'Hai nhánh CỎ mọc trên đầu chữ - dính tới cây cối' },
+  灬: { emoji: '🔥', story: 'Bốn chấm là ngọn LỬA liu riu dưới đáy nồi' },
+  火: { emoji: '🎇', story: 'Ngọn LỬA bùng lên với tàn lửa bay hai bên' },
+  扌: { emoji: '✋', story: 'Bàn TAY đang với ra làm gì đó - chữ về động tác' },
+  目: { emoji: '👁️', story: 'Con MẮT dựng dọc với hai mí' },
+  钅: { emoji: '🪙', story: 'KIM LOẠI/vàng bạc - chữ về tiền, đồ kim khí' },
+  纟: { emoji: '🧵', story: 'Sợi TƠ xoắn - chữ về vải, dây, màu sắc' },
+  大: { emoji: '🙆', story: 'Người dang rộng hai tay khoe "TO thế này này!"' },
+  子: { emoji: '👶', story: 'EM BÉ quấn tã chỉ ló đầu và hai tay' },
+  一: { emoji: '➖', story: 'MỘT nét ngang - số một, đơn giản nhất vũ trụ' },
+  父: { emoji: '👨', story: 'Người CHA cầm roi dạy con (thời xưa)' },
+  爫: { emoji: '🫳', story: 'Móng vuốt/bàn tay úp xuống NẮM lấy' },
+  饣: { emoji: '🍚', story: 'Liên quan tới ĐỒ ĂN - biến thể của 食 (thực)' },
+  辶: { emoji: '🛣️', story: 'Con ĐƯỜNG uốn lượn - chữ về di chuyển' },
+  门: { emoji: '🚪', story: 'Khung CỬA hai cánh nhìn từ chính diện' },
+  疒: { emoji: '🤒', story: 'Người ỐM nằm trên giường - chữ về bệnh tật' },
+  雨: { emoji: '🌧️', story: 'MƯA rơi lộp độp qua khung cửa sổ' },
+}
+
+/** Lấy liên tưởng hình ảnh của một bộ thủ (null nếu chưa có). */
+export function getRadicalVisual(radical) {
+  return radicalVisuals[radical] || null
+}

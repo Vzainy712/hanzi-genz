@@ -18,6 +18,10 @@ import VocabLessonDetailPage from './pages/VocabLessonDetailPage.jsx'
 import VocabQuizPage from './pages/VocabQuizPage.jsx'
 import TrendyPage from './pages/TrendyPage.jsx'
 import SentenceGamePage from './pages/SentenceGamePage.jsx'
+import ReviewPage from './pages/ReviewPage.jsx'
+import ChatPage from './pages/ChatPage.jsx'
+import BossPage from './pages/BossPage.jsx'
+import CollectionPage from './pages/CollectionPage.jsx'
 
 /** Bố cục gốc + định tuyến toàn ứng dụng. */
 export default function App() {
@@ -40,6 +44,10 @@ export default function App() {
           <Route path="/vocab-quiz/:lessonId" element={<VocabQuizPage />} />
           <Route path="/trending" element={<TrendyPage />} />
           <Route path="/sentence-game" element={<SentenceGamePage />} />
+          <Route path="/review" element={<ReviewPage />} />
+          <Route path="/chat" element={<ChatPage />} />
+          <Route path="/boss/:lessonId" element={<BossPage />} />
+          <Route path="/collection" element={<CollectionPage />} />
           <Route path="/grammar" element={<GrammarPage />} />
           <Route path="/grammar/:grammarId" element={<GrammarDetailPage />} />
           <Route path="/pronunciation" element={<PronunciationPage />} />

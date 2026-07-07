@@ -3,11 +3,32 @@ import { Link } from 'react-router-dom'
 /** Các chế độ luyện tập / khám phá trong app. */
 const modes = [
   {
+    to: '/review',
+    emoji: '🧠',
+    title: 'Ôn tập SRS',
+    desc: 'Ôn đúng từ sắp quên - nhớ trọn đời',
+    gradient: 'from-indigo-500 to-violet-600',
+  },
+  {
+    to: '/chat',
+    emoji: '💬',
+    title: 'Hội thoại nhập vai',
+    desc: 'Chat tình huống thật: trà sữa, crush, hỏi đường',
+    gradient: 'from-rose-500 to-pink-600',
+  },
+  {
     to: '/flashcards',
     emoji: '🃏',
     title: 'Flashcard nhớ mặt chữ',
     desc: 'Lật thẻ, tự kiểm tra trí nhớ chữ Hán',
     gradient: 'from-violet-500 to-fuchsia-500',
+  },
+  {
+    to: '/collection',
+    emoji: '🎴',
+    title: 'Bộ sưu tập thẻ',
+    desc: 'Từ đã học hoá thẻ bài - sưu tập đủ bộ!',
+    gradient: 'from-amber-500 to-yellow-500',
   },
   {
     to: '/listening',

@@ -19,7 +19,12 @@ Giao diện **hoàn toàn bằng tiếng Việt**.
 - 🧠 **Mẹo nhớ GenZ**: mỗi chữ có mẹo ghi nhớ dí dỏm, liên kết hình dạng/bộ thủ/âm với nghĩa.
 - 🃏 **Flashcard nhớ mặt chữ**: lật thẻ, tự đánh giá "đã nhớ / chưa nhớ" (chữ chưa nhớ được ôn lại).
 - 🎧 **Luyện nghe câu**: nghe câu tiếng Trung → chọn nghĩa đúng.
-- 🎓 **Giáo trình từ vựng chuẩn HSK**: 60 bài học sinh tự động từ kho từ thật (HSK 1: 15 bài, HSK 2: 15 bài, HSK 3: 30 bài) — mỗi bài ~10 từ với thẻ từ song ngữ Việt–Anh, nét chữ, phát âm, quiz riêng và câu trending kèm theo.
+- 🎓 **Giáo trình HỢP NHẤT theo chủ đề**: 595 từ HSK 1-3 chia thành **49 chủ đề thực dụng** (Chào hỏi, Gia đình, Ăn uống, Crush... 😏) — thẻ từ song ngữ Việt–Anh + **hình minh hoạ emoji** + liên tưởng bộ thủ (口 = cái miệng 👄) + mẹo nhớ GenZ + quiz + câu trending.
+- 🧠 **SRS — Ôn tập ngắt quãng**: thuật toán 6 hộp (1→2→4→7→15→30 ngày), mỗi ngày app tự chọn từ sắp quên bắt bạn ôn.
+- 🎯 **Nhiệm vụ hằng ngày**: học 3 từ mới, ôn 5 từ, thắng 1 quiz — nhận thưởng 💎 mỗi ngày.
+- 💬 **Hội thoại nhập vai**: chat tình huống thật (mua trà sữa, bắt chuyện crush, hỏi đường) — chọn sai nhận gợi ý tấu hài.
+- ⚔️ **Boss cuối chương**: học hết chủ đề thì đấu trùm quiz có thanh máu; thắng nhận huy hiệu Diệt Boss.
+- 🎴 **Bộ sưu tập thẻ chữ**: từ đã học hoá thẻ bài theo độ hiếm (Thường/Hiếm/Sử thi).
 - 🎤 **Góc giải trí tiếng Trung**: 39 nội dung — meme mạng (躺平, YYDS…), **trend Douyin** (栓Q, 尊嘟假嘟, 科目三…), **thoại phim/drama** (Tây Du Ký, Chân Hoàn Truyện, Cuồng Phong…) và lời nhạc hot (孤勇者, 小幸运…) kèm nguồn gốc + link ngữ pháp liên quan.
 - ⏰ **Nhắc học mỗi ngày**: đặt giờ nhắc trong trang Tiến độ, thông báo hệ thống + banner trong app.
 - 🧱 **Trò chơi Xếp câu**: ghép mảnh từ thành câu đúng thứ tự, chấm điểm + đọc to khi đúng.
