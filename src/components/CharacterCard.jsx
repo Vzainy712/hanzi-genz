@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import StrokeAnimation from './StrokeAnimation.jsx'
 import { toneColors, toneNames } from '../data/hskData.js'
+import { getMnemonic } from '../data/mnemonics.js'
 import { speakChinese, isSpeechSupported } from '../utils/speech.js'
 import { useProgress } from '../context/ProgressContext.jsx'
 
@@ -16,6 +17,7 @@ export default function CharacterCard({ char }) {
   const { isLearned, markLearned, unmarkLearned } = useProgress()
   const learned = isLearned(char.hanzi)
   const toneColor = toneColors[char.tone] ?? toneColors[0]
+  const mnemonic = getMnemonic(char.hanzi)
 
   return (
     <div className="card animate-pop-in flex flex-col gap-5">
@@ -71,6 +73,17 @@ export default function CharacterCard({ char }) {
           <div className="mt-1 text-xs text-slate-500">nét viết</div>
         </div>
       </div>
+
+      {/* Mẹo nhớ GenZ */}
+      {mnemonic && (
+        <div className="rounded-2xl bg-gradient-to-br from-brand-50 to-pink-50 p-4 ring-1 ring-brand-100">
+          <div className="flex items-center gap-2 text-sm font-black text-brand-600">
+            🧠 Mẹo nhớ GenZ
+          </div>
+          <p className="mt-1 text-sm font-semibold text-slate-700">{mnemonic.tip}</p>
+          <p className="mt-1 text-sm italic text-accent-pink">“{mnemonic.vibe}”</p>
+        </div>
+      )}
 
       {/* Nút mở hoạt hình nét chữ */}
       <button className="btn-ghost self-center" onClick={() => setShowStrokes((v) => !v)}>

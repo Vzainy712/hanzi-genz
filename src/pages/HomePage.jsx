@@ -64,27 +64,27 @@ export default function HomePage() {
         <h2 className="mb-3 text-lg font-extrabold text-slate-800">Khám phá thêm</h2>
         <div className="grid gap-3 sm:grid-cols-2">
           <Link
-            to="/grammar"
-            className="card group flex items-center gap-4 transition hover:scale-[1.02] hover:shadow-xl"
-          >
-            <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-cool text-3xl">
-              🔤
-            </div>
-            <div className="min-w-0">
-              <h3 className="font-extrabold text-slate-800">Ngữ pháp & Câu</h3>
-              <p className="text-sm text-slate-500">Học mẫu câu, tự đặt câu tiếng Trung</p>
-            </div>
-          </Link>
-          <Link
-            to="/pronunciation"
+            to="/flashcards"
             className="card group flex items-center gap-4 transition hover:scale-[1.02] hover:shadow-xl"
           >
             <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-genz text-3xl">
-              🗣️
+              🃏
             </div>
             <div className="min-w-0">
-              <h3 className="font-extrabold text-slate-800">Luyện phát âm</h3>
-              <p className="text-sm text-slate-500">4 thanh điệu + trò chơi đoán thanh</p>
+              <h3 className="font-extrabold text-slate-800">Flashcard nhớ chữ</h3>
+              <p className="text-sm text-slate-500">Lật thẻ, tự kiểm tra trí nhớ</p>
+            </div>
+          </Link>
+          <Link
+            to="/dictionary"
+            className="card group flex items-center gap-4 transition hover:scale-[1.02] hover:shadow-xl"
+          >
+            <div className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gradient-cool text-3xl">
+              📖
+            </div>
+            <div className="min-w-0">
+              <h3 className="font-extrabold text-slate-800">Từ điển HSK</h3>
+              <p className="text-sm text-slate-500">Tra cứu trọn bộ ~5000 từ HSK 1-6</p>
             </div>
           </Link>
         </div>

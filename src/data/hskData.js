@@ -688,6 +688,205 @@ export const hskData = [
           },
         ],
       },
+      {
+        id: 'hsk2-4',
+        title: 'Gia đình',
+        emoji: '👪',
+        description: 'Gọi tên các thành viên trong gia đình.',
+        characters: [
+          {
+            hanzi: '爸', pinyin: 'bà', tone: 4, meaning: 'bố, ba',
+            radical: '父', radicalName: 'phụ', radicalMeaning: 'người cha', strokeCount: 8,
+            examples: [
+              { hanzi: '爸爸', pinyin: 'bàba', meaning: 'bố' },
+              { hanzi: '爸妈', pinyin: 'bà mā', meaning: 'bố mẹ' },
+            ],
+          },
+          {
+            hanzi: '妈', pinyin: 'mā', tone: 1, meaning: 'mẹ, má',
+            radical: '女', radicalName: 'nữ', radicalMeaning: 'phụ nữ, con gái', strokeCount: 6,
+            examples: [
+              { hanzi: '妈妈', pinyin: 'māma', meaning: 'mẹ' },
+              { hanzi: '妈妈好', pinyin: 'māma hǎo', meaning: 'mẹ khỏe' },
+            ],
+          },
+          {
+            hanzi: '哥', pinyin: 'gē', tone: 1, meaning: 'anh trai',
+            radical: '口', radicalName: 'khẩu', radicalMeaning: 'cái miệng', strokeCount: 10,
+            examples: [
+              { hanzi: '哥哥', pinyin: 'gēge', meaning: 'anh trai' },
+              { hanzi: '大哥', pinyin: 'dà gē', meaning: 'anh cả' },
+            ],
+          },
+          {
+            hanzi: '姐', pinyin: 'jiě', tone: 3, meaning: 'chị gái',
+            radical: '女', radicalName: 'nữ', radicalMeaning: 'phụ nữ, con gái', strokeCount: 8,
+            examples: [
+              { hanzi: '姐姐', pinyin: 'jiějie', meaning: 'chị gái' },
+              { hanzi: '大姐', pinyin: 'dà jiě', meaning: 'chị cả' },
+            ],
+          },
+          {
+            hanzi: '弟', pinyin: 'dì', tone: 4, meaning: 'em trai',
+            radical: '弓', radicalName: 'cung', radicalMeaning: 'cái cung (bắn tên)', strokeCount: 7,
+            examples: [
+              { hanzi: '弟弟', pinyin: 'dìdi', meaning: 'em trai' },
+              { hanzi: '兄弟', pinyin: 'xiōng dì', meaning: 'anh em' },
+            ],
+          },
+        ],
+      },
+      {
+        id: 'hsk2-5',
+        title: 'Màu sắc & Đồ vật',
+        emoji: '🎨',
+        description: 'Màu cơ bản và vài đồ vật quen thuộc.',
+        characters: [
+          {
+            hanzi: '红', pinyin: 'hóng', tone: 2, meaning: 'màu đỏ',
+            radical: '纟', radicalName: 'mịch', radicalMeaning: 'sợi tơ, màu sắc', strokeCount: 6,
+            examples: [
+              { hanzi: '红色', pinyin: 'hóng sè', meaning: 'màu đỏ' },
+              { hanzi: '红茶', pinyin: 'hóng chá', meaning: 'hồng trà' },
+            ],
+          },
+          {
+            hanzi: '白', pinyin: 'bái', tone: 2, meaning: 'màu trắng',
+            radical: '白', radicalName: 'bạch', radicalMeaning: 'màu trắng', strokeCount: 5,
+            examples: [
+              { hanzi: '白色', pinyin: 'bái sè', meaning: 'màu trắng' },
+              { hanzi: '明白', pinyin: 'míng bai', meaning: 'hiểu rõ' },
+            ],
+          },
+          {
+            hanzi: '黑', pinyin: 'hēi', tone: 1, meaning: 'màu đen',
+            radical: '黑', radicalName: 'hắc', radicalMeaning: 'màu đen', strokeCount: 12,
+            examples: [
+              { hanzi: '黑色', pinyin: 'hēi sè', meaning: 'màu đen' },
+              { hanzi: '黑板', pinyin: 'hēi bǎn', meaning: 'bảng đen' },
+            ],
+          },
+          {
+            hanzi: '书', pinyin: 'shū', tone: 1, meaning: 'sách',
+            radical: '乙', radicalName: 'ất', radicalMeaning: 'nét cong', strokeCount: 4,
+            examples: [
+              { hanzi: '看书', pinyin: 'kàn shū', meaning: 'đọc sách' },
+              { hanzi: '书店', pinyin: 'shū diàn', meaning: 'hiệu sách' },
+            ],
+          },
+          {
+            hanzi: '钱', pinyin: 'qián', tone: 2, meaning: 'tiền',
+            radical: '钅', radicalName: 'kim', radicalMeaning: 'kim loại', strokeCount: 10,
+            examples: [
+              { hanzi: '多少钱', pinyin: 'duōshao qián', meaning: 'bao nhiêu tiền' },
+              { hanzi: '有钱', pinyin: 'yǒu qián', meaning: 'có tiền, giàu' },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    level: 3,
+    label: 'HSK 3',
+    color: 'from-orange-500 to-rose-500',
+    lessons: [
+      {
+        id: 'hsk3-1',
+        title: 'Cảm xúc',
+        emoji: '😊',
+        description: 'Diễn tả cảm giác: mệt, vui, buồn, bận, sợ.',
+        characters: [
+          {
+            hanzi: '累', pinyin: 'lèi', tone: 4, meaning: 'mệt, mệt mỏi',
+            radical: '纟', radicalName: 'mịch', radicalMeaning: 'sợi tơ', strokeCount: 11,
+            examples: [
+              { hanzi: '很累', pinyin: 'hěn lèi', meaning: 'rất mệt' },
+              { hanzi: '太累了', pinyin: 'tài lèi le', meaning: 'mệt quá' },
+            ],
+          },
+          {
+            hanzi: '笑', pinyin: 'xiào', tone: 4, meaning: 'cười',
+            radical: '竹', radicalName: 'trúc', radicalMeaning: 'cây tre', strokeCount: 10,
+            examples: [
+              { hanzi: '笑话', pinyin: 'xiàohua', meaning: 'truyện cười' },
+              { hanzi: '开玩笑', pinyin: 'kāi wánxiào', meaning: 'nói đùa' },
+            ],
+          },
+          {
+            hanzi: '哭', pinyin: 'kū', tone: 1, meaning: 'khóc',
+            radical: '口', radicalName: 'khẩu', radicalMeaning: 'cái miệng', strokeCount: 10,
+            examples: [
+              { hanzi: '哭了', pinyin: 'kū le', meaning: 'đã khóc' },
+              { hanzi: '别哭', pinyin: 'bié kū', meaning: 'đừng khóc' },
+            ],
+          },
+          {
+            hanzi: '忙', pinyin: 'máng', tone: 2, meaning: 'bận, bận rộn',
+            radical: '忄', radicalName: 'tâm đứng', radicalMeaning: 'trái tim, cảm xúc', strokeCount: 6,
+            examples: [
+              { hanzi: '很忙', pinyin: 'hěn máng', meaning: 'rất bận' },
+              { hanzi: '帮忙', pinyin: 'bāng máng', meaning: 'giúp đỡ' },
+            ],
+          },
+          {
+            hanzi: '怕', pinyin: 'pà', tone: 4, meaning: 'sợ',
+            radical: '忄', radicalName: 'tâm đứng', radicalMeaning: 'trái tim, cảm xúc', strokeCount: 8,
+            examples: [
+              { hanzi: '害怕', pinyin: 'hài pà', meaning: 'sợ hãi' },
+              { hanzi: '别怕', pinyin: 'bié pà', meaning: 'đừng sợ' },
+            ],
+          },
+        ],
+      },
+      {
+        id: 'hsk3-2',
+        title: 'Động từ hữu ích',
+        emoji: '🛠️',
+        description: 'Động từ dùng nhiều: giúp, dùng, nhớ, quên, dạy.',
+        characters: [
+          {
+            hanzi: '帮', pinyin: 'bāng', tone: 1, meaning: 'giúp đỡ',
+            radical: '巾', radicalName: 'cân', radicalMeaning: 'cái khăn', strokeCount: 9,
+            examples: [
+              { hanzi: '帮助', pinyin: 'bāngzhù', meaning: 'giúp đỡ' },
+              { hanzi: '帮我', pinyin: 'bāng wǒ', meaning: 'giúp tôi' },
+            ],
+          },
+          {
+            hanzi: '用', pinyin: 'yòng', tone: 4, meaning: 'dùng, sử dụng',
+            radical: '用', radicalName: 'dụng', radicalMeaning: 'sử dụng', strokeCount: 5,
+            examples: [
+              { hanzi: '有用', pinyin: 'yǒu yòng', meaning: 'có ích' },
+              { hanzi: '不用', pinyin: 'bú yòng', meaning: 'không cần' },
+            ],
+          },
+          {
+            hanzi: '记', pinyin: 'jì', tone: 4, meaning: 'ghi nhớ, ghi lại',
+            radical: '讠', radicalName: 'ngôn', radicalMeaning: 'lời nói', strokeCount: 5,
+            examples: [
+              { hanzi: '记得', pinyin: 'jìde', meaning: 'nhớ được' },
+              { hanzi: '日记', pinyin: 'rìjì', meaning: 'nhật ký' },
+            ],
+          },
+          {
+            hanzi: '忘', pinyin: 'wàng', tone: 4, meaning: 'quên',
+            radical: '心', radicalName: 'tâm', radicalMeaning: 'trái tim', strokeCount: 7,
+            examples: [
+              { hanzi: '忘记', pinyin: 'wàngjì', meaning: 'quên mất' },
+              { hanzi: '别忘了', pinyin: 'bié wàng le', meaning: 'đừng quên' },
+            ],
+          },
+          {
+            hanzi: '教', pinyin: 'jiāo', tone: 1, meaning: 'dạy',
+            radical: '攵', radicalName: 'phộc', radicalMeaning: 'động tác đánh nhẹ', strokeCount: 11,
+            examples: [
+              { hanzi: '教我', pinyin: 'jiāo wǒ', meaning: 'dạy tôi' },
+              { hanzi: '教书', pinyin: 'jiāo shū', meaning: 'dạy học' },
+            ],
+          },
+        ],
+      },
     ],
   },
 ]

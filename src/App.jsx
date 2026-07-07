@@ -8,6 +8,11 @@ import ProgressPage from './pages/ProgressPage.jsx'
 import GrammarPage from './pages/GrammarPage.jsx'
 import GrammarDetailPage from './pages/GrammarDetailPage.jsx'
 import PronunciationPage from './pages/PronunciationPage.jsx'
+import PracticePage from './pages/PracticePage.jsx'
+import FlashcardPage from './pages/FlashcardPage.jsx'
+import ListeningPage from './pages/ListeningPage.jsx'
+import RadicalsPage from './pages/RadicalsPage.jsx'
+import DictionaryPage from './pages/DictionaryPage.jsx'
 
 /** Bố cục gốc + định tuyến toàn ứng dụng. */
 export default function App() {
@@ -20,6 +25,11 @@ export default function App() {
           <Route path="/lessons" element={<LessonsPage />} />
           <Route path="/lesson/:lessonId" element={<LessonDetailPage />} />
           <Route path="/quiz/:lessonId" element={<QuizPage />} />
+          <Route path="/practice" element={<PracticePage />} />
+          <Route path="/flashcards" element={<FlashcardPage />} />
+          <Route path="/listening" element={<ListeningPage />} />
+          <Route path="/radicals" element={<RadicalsPage />} />
+          <Route path="/dictionary" element={<DictionaryPage />} />
           <Route path="/grammar" element={<GrammarPage />} />
           <Route path="/grammar/:grammarId" element={<GrammarDetailPage />} />
           <Route path="/pronunciation" element={<PronunciationPage />} />

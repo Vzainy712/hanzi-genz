@@ -8,8 +8,7 @@ export default function Navbar() {
   const links = [
     { to: '/', label: 'Trang chủ', icon: '🏠', end: true },
     { to: '/lessons', label: 'Bài học', icon: '📚' },
-    { to: '/grammar', label: 'Ngữ pháp', icon: '🔤' },
-    { to: '/pronunciation', label: 'Phát âm', icon: '🗣️' },
+    { to: '/practice', label: 'Luyện tập', icon: '🎯' },
     { to: '/progress', label: 'Tiến độ', icon: '📊' },
   ]
 

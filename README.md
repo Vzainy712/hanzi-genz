@@ -13,15 +13,27 @@ Giao diện **hoàn toàn bằng tiếng Việt**.
 - 🧩 **Bộ thủ (部首)**: hiển thị bộ thủ, tên Hán Việt và ý nghĩa.
 - 🔊 **Phát âm**: nghe giọng đọc tiếng Trung (Web Speech API của trình duyệt).
 - 📝 **Câu ví dụ**: từ ghép và cụm từ thông dụng cho mỗi chữ.
+- 🧠 **Mẹo nhớ GenZ**: mỗi chữ có mẹo ghi nhớ dí dỏm, liên kết hình dạng/bộ thủ/âm với nghĩa.
+- 🃏 **Flashcard nhớ mặt chữ**: lật thẻ, tự đánh giá "đã nhớ / chưa nhớ" (chữ chưa nhớ được ôn lại).
+- 🎧 **Luyện nghe câu**: nghe câu tiếng Trung → chọn nghĩa đúng.
+- 📖 **Từ điển HSK đầy đủ**: tra cứu **~4.991 từ HSK 1-6** (nhập từ dữ liệu mở), tìm theo chữ Hán/pinyin/nghĩa, lọc theo cấp. Hiển thị **song song Việt–Anh** (HSK 1 đã phủ 100% tiếng Việt, các cấp sau bổ sung dần).
+- 🧩 **Module Bộ thủ (部首)**: học các bộ chữ gốc kèm ví dụ chữ chứa bộ đó.
 - 🔤 **Ngữ pháp & Câu**: 9 mẫu câu HSK (是, 吗, 的, 不/没, 很, 有, lượng từ 个, 在…) kèm câu ví dụ có audio.
 - 🗣️ **Module Phát âm**: giải thích 4 thanh điệu, bảng thanh mẫu/vận mẫu khó, và **trò chơi đoán thanh điệu**.
 - 🎯 **Quiz trắc nghiệm**: kiểm tra nghĩa của chữ, chấm điểm, pháo giấy chúc mừng.
 - 🎉 **Phản hồi động viên**: thông báo nổi (toast) khi được điểm, mở khoá huy hiệu, đoán đúng/sai.
 - 🏆 **Gamification**: điểm, chuỗi ngày (streak), huy hiệu.
 - 📊 **Theo dõi tiến độ**: theo từng cấp độ HSK, lưu tự động.
-- 📱 **Mobile-first**: tối ưu cho điện thoại, có thanh điều hướng dưới.
+- 📱 **Mobile-first**: điều hướng gọn 4 mục (Trang chủ · Bài học · Luyện tập · Tiến độ).
 
-Nội dung hiện tại: **~50 chữ** (HSK 1-2, 9 bài) + **9 điểm ngữ pháp** + module phát âm.
+Nội dung hiện tại:
+- **Bài học curated** (có nét, mẹo nhớ GenZ, ví dụ): ~70 chữ HSK 1-3, 13 bài
+- **Từ điển tra cứu**: ~4.991 từ HSK 1-6 (HSK 1 đã dịch đủ tiếng Việt)
+- **9 điểm ngữ pháp** + **15 bộ thủ** + module phát âm
+
+> Dữ liệu từ vựng đầy đủ lấy từ nguồn mở [complete-hsk-vocabulary](https://github.com/drkameleon/complete-hsk-vocabulary)
+> (chữ Hán + pinyin + nghĩa Anh + bộ thủ). Nghĩa tiếng Việt do dự án tự biên soạn, bổ sung dần
+> qua lớp phủ `src/data/viOverlay.js`.
 
 ## 🛠️ Công nghệ
 
