@@ -7,15 +7,16 @@ import { ToastProvider } from './context/ToastContext.jsx'
 import './index.css'
 
 // Đăng ký service worker (chỉ ở bản production để không cản trở dev/HMR).
+// BASE_URL tự đổi theo môi trường: '/' khi dev, '/hanzi-genz/' trên GitHub Pages.
 if (import.meta.env.PROD && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {})
+    navigator.serviceWorker.register(`${import.meta.env.BASE_URL}sw.js`).catch(() => {})
   })
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <ToastProvider>
         <ProgressProvider>
           <App />

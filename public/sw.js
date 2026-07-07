@@ -35,8 +35,11 @@ self.addEventListener('fetch', (event) => {
         caches.match(request).then(
           (cached) =>
             cached ||
-            // SPA: khi offline mà điều hướng trang lạ, trả về index.html.
-            (request.mode === 'navigate' ? caches.match('/index.html') : undefined),
+            // SPA: khi offline mà điều hướng trang lạ, trả về trang gốc của app
+            // (tính theo vị trí sw.js để chạy đúng cả ở / lẫn /hanzi-genz/).
+            (request.mode === 'navigate'
+              ? caches.match(new URL('./', self.location).href)
+              : undefined),
         ),
       ),
   )
