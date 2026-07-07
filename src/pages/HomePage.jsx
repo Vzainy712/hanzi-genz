@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useProgress } from '../context/ProgressContext.jsx'
 import { hskData } from '../data/hskData.js'
+import { vocabLessonGroups, VOCAB_LEVEL_COLORS } from '../data/vocabLessons.js'
 
 /** Trang chủ - dashboard tổng quan, lời chào và lối tắt vào bài học. */
 export default function HomePage() {
@@ -90,24 +91,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Danh sách cấp độ */}
+      {/* Danh sách cấp độ - gộp bài chọn lọc + giáo trình từ vựng chuẩn */}
       <section>
         <h2 className="mb-3 text-lg font-extrabold text-slate-800">Chọn cấp độ HSK</h2>
         <div className="grid gap-3 sm:grid-cols-2">
-          {hskData.map((level) => {
-            const total = level.lessons.reduce((s, l) => s + l.characters.length, 0)
-            const done = level.lessons
-              .flatMap((l) => l.characters)
-              .filter((c) => learnedIds.includes(c.hanzi)).length
+          {[1, 2, 3].map((lvl) => {
+            const curated = hskData.find((l) => l.level === lvl)
+            const group = vocabLessonGroups.find((g) => g.level === lvl)
+            // Gộp không trùng lặp: chữ trong bài chọn lọc + từ trong giáo trình chuẩn.
+            const wordSet = new Set([
+              ...(curated ? curated.lessons.flatMap((l) => l.characters.map((c) => c.hanzi)) : []),
+              ...(group ? group.lessons.flatMap((l) => l.words.map((w) => w.hanzi)) : []),
+            ])
+            const lessonCount = (curated?.lessons.length || 0) + (group?.lessons.length || 0)
+            const done = [...wordSet].filter((h) => learnedIds.includes(h)).length
+            const percent = wordSet.size ? Math.round((done / wordSet.size) * 100) : 0
             return (
               <Link
-                key={level.level}
+                key={lvl}
                 to="/lessons"
-                className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br ${level.color} p-5 text-white shadow-lg transition hover:scale-[1.02]`}
+                className={`group relative overflow-hidden rounded-3xl bg-gradient-to-br ${VOCAB_LEVEL_COLORS[lvl]} p-5 text-white shadow-lg transition hover:scale-[1.02]`}
               >
-                <div className="text-2xl font-black">{level.label}</div>
-                <div className="mt-1 text-sm text-white/90">{level.lessons.length} bài học · {total} chữ</div>
-                <div className="mt-3 text-sm font-bold text-white/95">Đã học: {done}/{total}</div>
+                <div className="flex items-center justify-between">
+                  <div className="text-2xl font-black">HSK {lvl}</div>
+                  <span className="rounded-full bg-white/20 px-2.5 py-0.5 text-xs font-black">
+                    {percent}%
+                  </span>
+                </div>
+                <div className="mt-1 text-sm text-white/90">
+                  {lessonCount} bài học · {wordSet.size} từ (đủ giáo trình ✓)
+                </div>
+                <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-white/25">
+                  <div
+                    className="h-full rounded-full bg-white transition-all duration-500"
+                    style={{ width: `${percent}%` }}
+                  />
+                </div>
+                <div className="mt-2 text-sm font-bold text-white/95">Đã học: {done}/{wordSet.size}</div>
               </Link>
             )
           })}
