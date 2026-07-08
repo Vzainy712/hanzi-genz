@@ -22,7 +22,7 @@ Giao diện **hoàn toàn bằng tiếng Việt**.
 - 🎓 **Giáo trình HỢP NHẤT theo chủ đề**: 595 từ HSK 1-3 chia thành **49 chủ đề thực dụng** (Chào hỏi, Gia đình, Ăn uống, Crush... 😏) — thẻ từ song ngữ Việt–Anh + **hình minh hoạ emoji** + liên tưởng bộ thủ (口 = cái miệng 👄) + mẹo nhớ GenZ + quiz + câu trending.
 - 🧠 **SRS — Ôn tập ngắt quãng**: thuật toán 6 hộp (1→2→4→7→15→30 ngày), mỗi ngày app tự chọn từ sắp quên bắt bạn ôn.
 - 🎯 **Nhiệm vụ hằng ngày**: học 3 từ mới, ôn 5 từ, thắng 1 quiz — nhận thưởng 💎 mỗi ngày.
-- 💬 **Hội thoại nhập vai**: chat tình huống thật (mua trà sữa, bắt chuyện crush, hỏi đường) — chọn sai nhận gợi ý tấu hài.
+- 💬 **Hội thoại nhập vai (chế độ immersion)**: 8 tình huống thật (trà sữa, crush, hỏi đường, nhà hàng, mặc cả ở chợ, khám bệnh, khách sạn, sinh nhật) với 43 lượt thoại cài cắm cú pháp (还是, 要不要, 能不能, 从…开始, 别…, 越来越, 虽然…但是…). **Vietsub bị che mờ** — chỉ hiện chữ Hán + pinyin + audio tự phát; bấm dòng mờ hoặc bật công tắc khi cần. Chọn sai nhận gợi ý tấu hài.
 - ⚔️ **Boss cuối chương**: học hết chủ đề thì đấu trùm quiz có thanh máu; thắng nhận huy hiệu Diệt Boss.
 - 🎴 **Bộ sưu tập thẻ chữ**: từ đã học hoá thẻ bài theo độ hiếm (Thường/Hiếm/Sử thi).
 - 🎤 **Góc giải trí tiếng Trung**: 39 nội dung — meme mạng (躺平, YYDS…), **trend Douyin** (栓Q, 尊嘟假嘟, 科目三…), **thoại phim/drama** (Tây Du Ký, Chân Hoàn Truyện, Cuồng Phong…) và lời nhạc hot (孤勇者, 小幸运…) kèm nguồn gốc + link ngữ pháp liên quan.

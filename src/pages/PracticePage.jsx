@@ -13,7 +13,7 @@ const modes = [
     to: '/chat',
     emoji: '💬',
     title: 'Hội thoại nhập vai',
-    desc: 'Chat tình huống thật: trà sữa, crush, hỏi đường',
+    desc: '8 tình huống thật, vietsub che mờ để luyện nhớ chữ',
     gradient: 'from-rose-500 to-pink-600',
   },
   {
