@@ -13,7 +13,7 @@ const modes = [
     to: '/chat',
     emoji: '💬',
     title: 'Hội thoại nhập vai',
-    desc: '8 tình huống thật, vietsub che mờ để luyện nhớ chữ',
+    desc: '11 tình huống: nhánh tự nhiên + luyện cú pháp',
     gradient: 'from-rose-500 to-pink-600',
   },
   {
